@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ "$1" = upgrade ]; then
+	echo "wso2am product has been installed previously. If you want to install this product please remove existing wso2am and try again."
+  exit 1
+fi
+if  [ "$1" = install ] && [ -e /usr/share/wso2am/copyright ]; then
+	echo "Found a existing copyright file from previous version."
+	dpkg-divert --divert /usr/share/wso2am/copyright.by2.6.0 --rename /usr/share/wso2am/copyright
+fi

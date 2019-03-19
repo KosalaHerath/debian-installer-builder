@@ -1,0 +1,20 @@
+#!/bin/sh
+
+if [ $1 = 'remove' ] && [ -L /usr/bin/wso2am ]; then
+  sudo rm /usr/bin/wso2am
+  dpkg-divert --rename --remove /usr/share/wso2am/copyright
+fi
+if [ $1 = 'purge' ] && [ -d /usr/lib/wso2am/2.6.0/ ]; then
+	echo "Remove configuration files."
+	sudo rm -rf /usr/lib/wso2am/2.6.0/
+	dirCount=0
+	for directory in /usr/wso2/wso2am/*;
+	do
+	  if [ -d "$directory" ]; then
+	    dirCount=$((dirCount+1))
+	  fi
+	done
+	if [ "$dirCount" = 0 ] ; then
+	 	sudo rm -rf /usr/lib/wso2am/
+	fi
+fi

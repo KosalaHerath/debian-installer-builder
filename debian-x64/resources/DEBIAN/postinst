@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ "$1" = configure ]; then
+	PRODUCT_HOME="/usr/lib/wso2am/2.6.0/bin/"
+	echo "Adding shortcuts for wso2am product."
+	ln -sf $PRODUCT_HOME/wso2server.sh /usr/bin/wso2am
+	echo "NOTE: Please make sure JAVA has been installed and JAVA_HOME has been defined."
+fi
+if [ "$1" = abort-upgrade ]; then
+	echo "Aborting the installation without upgrading the existing product."
+fi

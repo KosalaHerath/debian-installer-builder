@@ -1,0 +1,21 @@
+Source: __PRODUCT__
+Section: x11
+Priority: optional
+Maintainer: Kosala Herath <kosala@wso2.com>
+Version: __VERSION__
+Homepage: https://wso2.com/api-management/
+Package: __PRODUCT__
+Architecture: amd64
+Installed-Size: __PRODUCT_SIZE__
+Description: WSO2 API Manager
+ WSO2 API Manager is a complete solution for designing and publishing APIs, creating and managing a developer community, and for securing and routing API traffic in a scalable manner. It leverages proven components from the WSO2 platform to secure, integrate and manage APIs. In addition, it integrates with the WSO2 analytics platform and provides out of the box reports and alerts, giving you instant insights into the APIs behavior.
+ .
+  
+ .
+ Instructions (After Installation):
+ .
+  
+ .
+ To run "wso2server.sh file", open new terminal and run:
+ .
+    `$ wso2am-2.6.0`
