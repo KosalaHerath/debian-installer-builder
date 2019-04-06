@@ -111,7 +111,7 @@ copyDebianDirectory() {
 copyBuildDirectories() {
     mkdir -p ${TARGET_DIRECTORY}/${INSTALLATION_DIRECTORY}/usr/lib/${PRODUCT}/${VERSION}
     cp -a ./application/. ${TARGET_DIRECTORY}/${INSTALLATION_DIRECTORY}/usr/lib/${PRODUCT}/${VERSION}
-    chmod -R o+w ${TARGET_DIRECTORY}/${INSTALLATION_DIRECTORY}/usr/lib/${PRODUCT}/${VERSION}
+    chmod -R u+w ${TARGET_DIRECTORY}/${INSTALLATION_DIRECTORY}/usr/lib/${PRODUCT}/${VERSION}
 }
 
 createInstaller() {
